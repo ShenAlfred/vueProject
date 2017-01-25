@@ -1,16 +1,19 @@
 <template>
-  <div>
-    News
-    <NavBar></NavBar>
-  </div>
+      <view-box ref="viewBox">
+        News
+        <NavBar></NavBar>
+      </view-box>
 </template>
 <style>
 </style>
 <script>
     import NavBar from '../../components/common/tabbar/nav'
+    import { ViewBox } from 'vux'
+
     export default {
       components: {
-        NavBar
+        NavBar,
+        ViewBox
       },
       data () {
         return {

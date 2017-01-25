@@ -1,18 +1,10 @@
 <template>
-  <div style="height: 100%;">
-    <view-box ref="viewBox">
-      <router-view></router-view>
-    </view-box>
-  </div>
+    <router-view></router-view>
 </template>
 
 <script>
-  import { ViewBox } from 'vux'
-
   export default {
-    components: {
-      ViewBox
-    }
+    components: {}
   }
 </script>
 
@@ -20,7 +12,6 @@
 @import '~vux/src/styles/reset.less';
 @import 'assets/style/reset.scss';
 @import 'assets/font-awesome-4.7.0/css/font-awesome.min.css';
-@import '~animate.css/animate.min.css'
 
   body {
     background-color: #fbf9fe;

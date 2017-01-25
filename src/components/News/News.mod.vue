@@ -1,26 +1,12 @@
 <template>
-  <div id='news'>
-    <router-view></router-view>
-  </div>
+  <transition name="fade">
+    <div id='news'style="height: 100%;">
+        <router-view></router-view>
+    </div>
+  </transition>
 </template>
 <style>
+  @import '../../assets/style/animate.scss'
 </style>
 <script>
-    import Vue from 'vue'
-    import VueRouter from 'vue-router'
-    import News from './NewsVux'
-
-    Vue.use(VueRouter)
-
-    const router = new VueRouter({
-      routes: [
-        {
-          path: '/news',
-          component: News
-        }
-      ]
-    })
-
-    export default router
-
 </script>
