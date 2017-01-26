@@ -23,6 +23,14 @@
           // its initial state.
           msg: 'Hello World!'
         }
+      },
+      beforeCreate () {
+        console.log('创建前')
+        console.log(this)
+      },
+      created () {
+        console.log('创建后')
+        console.log(this)
       }
     }
 </script>

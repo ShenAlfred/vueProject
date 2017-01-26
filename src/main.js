@@ -15,6 +15,8 @@ import NewsRouter from './components/News/News.mod.vue'
 
 Vue.use(VueRouter)
 
+window.location.hash = 'home'
+
 const routes = [
   {
     path: '/home',
