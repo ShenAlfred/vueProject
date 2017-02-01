@@ -34,7 +34,12 @@
     },
     watch: {
       $route () {
-        console.log(1111)
+        var patten = new RegExp('#more')
+        if (patten.test(window.location.hash)) {
+          this.state = 'more'
+        } else {
+          this.state = 'detail'
+        }
       }
     },
     beforeCreate () {

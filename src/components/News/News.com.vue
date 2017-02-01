@@ -1,6 +1,6 @@
 <template>
       <view-box ref="viewBox">
-        News
+        <TodoList></TodoList>
         <NavBar></NavBar>
       </view-box>
 </template>
@@ -8,12 +8,14 @@
 </style>
 <script>
     import NavBar from '../../components/common/tabbar/nav'
+    import TodoList from './TodoList/todo.com'
     import { ViewBox } from 'vux'
 
     export default {
       components: {
         NavBar,
-        ViewBox
+        ViewBox,
+        TodoList
       },
       data () {
         return {
