@@ -8,7 +8,7 @@
 </style>
 <script>
     import NavBar from '../../components/common/tabbar/nav'
-    import TodoList from './TodoList/todo.com'
+    import TodoList from './TodoList/Todo.com'
     import { ViewBox } from 'vux'
 
     export default {

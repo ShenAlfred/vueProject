@@ -1,6 +1,7 @@
 <template>
       <view-box ref="viewBox">
         Message
+
         <NavBar></NavBar>
       </view-box>
 </template>

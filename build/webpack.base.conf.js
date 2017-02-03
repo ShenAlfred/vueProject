@@ -58,6 +58,10 @@ let webpackConfig = {
         loader: 'vue'
       },
       {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      },
+      {
         test: /\.js$/,
         loader: 'babel',
         include: [

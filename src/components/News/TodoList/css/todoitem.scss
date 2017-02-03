@@ -1,0 +1,35 @@
+#todo-list {
+  margin-top: 10px;
+  border-top: 1px solid #c8c8c8;
+}
+.todo-list-item{
+  border-bottom: 1px solid #c8c8c8;
+  background: #fff;
+  padding: 15px 10px;
+}
+.todo-content {
+  position: relative;
+  color: #333;
+  width: 80%;
+}
+.icon-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 18px;
+  padding-top: 2px;
+  text-align: center;
+  background: #efefef;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.icon-btn.warn {
+  background: #ef4f4f;
+  color: #fff;
+  border-color: #ef4f4f;
+}
+.icon-btn.primary {
+  background: #04be02;
+  color: #fff;
+  border-color: #04be02;
+}

@@ -1,0 +1,16 @@
+#todo-list-search {
+  margin-top: 10px;
+  background: #efefef;
+  padding: 10px 5px;
+}
+input[type="text"] {
+  height: 100%;
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  border: 1px solid #888;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
