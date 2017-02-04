@@ -1,8 +1,10 @@
 <template>
   <transition name='fade'>
     <div v-if="state=='detail'">
-        message detail
-        <button v-on:click="more">{{ load_more_text }}</button>
+        message detail <br />
+        <router-link to="#more">
+          <x-button type="primary">{{ load_more_text }}</x-button>
+        </router-link>
     </div>
     <message-detail-more v-if="state=='more'"></message-detail-more>
   </transition>
@@ -12,14 +14,16 @@
 </style>
 <script>
   import MessageDetailMore from './MessageDetailMore.com'
+  import { XButton } from 'vux'
 
   export default {
     components: {
-      MessageDetailMore
+      MessageDetailMore,
+      XButton
     },
     data () {
       return {
-        load_more_text: '点击查看更多',
+        load_more_text: '详情中的更多,还想怎么样!!!',
         count: 0,
         state: 'detail'
       }

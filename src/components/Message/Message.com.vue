@@ -1,7 +1,9 @@
 <template>
       <view-box ref="viewBox">
         Message
-
+        <router-link to='message/detail'>
+          <x-button mini>查看详情</x-button>
+        </router-link>
         <NavBar></NavBar>
       </view-box>
 </template>
@@ -9,12 +11,13 @@
 </style>
 <script>
     import NavBar from '../../components/common/tabbar/nav'
-    import { ViewBox } from 'vux'
+    import { XButton, ViewBox } from 'vux'
 
     export default {
       components: {
         NavBar,
-        ViewBox
+        ViewBox,
+        XButton
       },
       data () {
         return {
@@ -23,6 +26,11 @@
           // preserves its current state and we are modifying
           // its initial state.
           msg: 'Hello World!'
+        }
+      },
+      methods: {
+        seeMore () {
+
         }
       },
       beforeCreate () {
