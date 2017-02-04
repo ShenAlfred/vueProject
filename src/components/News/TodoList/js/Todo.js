@@ -6,6 +6,11 @@ let _tasks = [{
 }]
 
 function _submitTodo () {
+  this.$http.get('http://10.52.30.105:3000/User', {}).then(function (req) {
+    console.log(req)
+  }, function (req) {
+    console.log(req)
+  })
   var objTask = {}
   if (this.task) {
     objTask._task = this.task

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
 import App from './App'
 
 import Home from './components/Home/Home.com'
@@ -14,6 +15,7 @@ import HomeRouter from './components/Home/Home.mod.vue'
 import NewsRouter from './components/News/News.mod.vue'
 
 Vue.use(VueRouter)
+Vue.use(VueResource)
 
 window.location.hash = 'home'
 
