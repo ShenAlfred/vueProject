@@ -1,37 +1,43 @@
 <template>
-    <view-box ref="viewBox">
-      Home <br />
-      <button v-on:click="show =!show">{{ msg }}</button>
-      {{ counter }}
-      <transition name="fade">
-        <p v-if="show">{{ msg }}</p>
-      </transition>
+    <view-box>
+      <grid>
+        <div v-for="grid in grids">
+          <router-link :to="grid.url">
+            <grid-item :label="grid.name">
+                <img slot="icon" :src="grid.icon">
+            </grid-item>
+          </router-link>
+        </div>
+      </grid>
       <NavBar></NavBar>
     </view-box>
 </template>
 
 <script>
   import NavBar from '../../components/common/tabbar/nav'
-  import FastClick from 'fastclick'
-  import { ViewBox } from 'vux'
-
-  FastClick.attach(document.body)
+  import { ViewBox, Grid, GridItem } from 'vux'
+  import config from '../../config'
 
   export default {
     components: {
       NavBar,
-      ViewBox
+      ViewBox,
+      Grid,
+      GridItem
     },
     data () {
       return {
-        // note: changing this line won't causes changes
-        // with hot-reload because the reloaded component
-        // preserves its current state and we are modifying
-        // its initial state.
-        msg: 'Hello World!',
-        show: true,
-        counter: 0
+        grids: []
       }
+    },
+    methods: {
+    },
+    created () {
+      this.$http.get(config.baseUrl + '/Grids', {}).then((success) => {
+        this.grids = success.body.Grids
+      }, (error) => {
+        console.log(error)
+      })
     }
   }
 

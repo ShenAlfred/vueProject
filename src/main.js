@@ -5,56 +5,10 @@ import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import App from './App'
-
-import Home from './components/Home/Home.com'
-import News from './components/News/News.com'
-import Message from './components/Message/Message.com'
-import MessageDetail from './components/Message/MessageDetail.com'
-import MessageRouter from './components/Message/Message.mod.vue'
-import HomeRouter from './components/Home/Home.mod.vue'
-import NewsRouter from './components/News/News.mod.vue'
-
+import routes from './configRouter'
 Vue.use(VueRouter)
 Vue.use(VueResource)
-
 window.location.hash = 'home'
-
-const routes = [
-  {
-    path: '/home',
-    component: HomeRouter,
-    children: [
-      {
-        path: '/',
-        component: Home
-      }
-    ]
-  },
-  {
-    path: '/message',
-    component: MessageRouter,
-    children: [
-      {
-        path: '/',
-        component: Message
-      },
-      {
-        path: '/message/detail',
-        component: MessageDetail
-      }
-    ]
-  },
-  {
-    path: '/News',
-    component: NewsRouter,
-    children: [
-      {
-        path: '/',
-        component: News
-      }
-    ]
-  }
-]
 
 const router = new VueRouter({
   routes
