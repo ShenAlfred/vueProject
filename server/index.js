@@ -4,7 +4,8 @@ const http = require("http")
 const app = express()
 
 const User = require('./User/user')
-app.use(express.static('static'))
+const Grids = require('./Grids/grids')
+app.use('/static', express.static('static'))
 
 
 app.all('*', function(req, res, next) {
@@ -14,8 +15,16 @@ app.all('*', function(req, res, next) {
   next();
 })
 
+app.get('/', function(req, res) {
+  res.end("Hello World!!!")
+})
+
 app.get('/User', function(req, res) {
   res.end(JSON.stringify(User))
+})
+
+app.get('/Grids', (req, res) => {
+  res.end(JSON.stringify(Grids))
 })
 
 let server = app.listen(3000, function() {

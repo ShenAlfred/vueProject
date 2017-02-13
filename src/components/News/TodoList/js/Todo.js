@@ -1,12 +1,13 @@
-let _task = ''
+import config from '../../../../config'
 
+let _task = ''
 let _tasks = [{
   _task: 'This is my first task for learn VueJs. That is Long Long Long.',
   isEdit: false
 }]
 
 function _submitTodo () {
-  this.$http.get('http://10.52.30.105:3000/User', {}).then(function (req) {
+  this.$http.get(config.baseUrl + '/User', {}).then(function (req) {
     console.log(req)
   }, function (req) {
     console.log(req)

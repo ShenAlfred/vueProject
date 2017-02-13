@@ -5,7 +5,7 @@ import FastClick from 'fastclick'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import App from './App'
-import ConfigRouter from './router'
+import routes from './configRouter'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -14,6 +14,7 @@ window.location.hash = 'home'
 FastClick.attach(document.body)
 
 let routes = ConfigRouter
+
 const router = new VueRouter({
   routes
 })
