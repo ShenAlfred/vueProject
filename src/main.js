@@ -9,6 +9,7 @@ import ConfigRouter from './router'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
+
 window.location.hash = 'home'
 FastClick.attach(document.body)
 

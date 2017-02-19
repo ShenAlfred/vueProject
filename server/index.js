@@ -1,4 +1,3 @@
-<<<<<<< 73191c269cff8e08cff6d86bdf60397ea52279e3
 const mongoose = require('mongoose')
 const express = require('express')
 const http = require("http")
@@ -26,16 +25,4 @@ let server = app.listen(3000, function() {
   console.log('Example app listening at http://%s:%s', host, port);
 
 });
-=======
-/**
- * Created by shenalfred on 17/2/5.
- */
-const express = require("express")
-const app = express()
 
-let server = app.listen(3000, function() {
-
-  console.log("服务器运行在端口:" + server.address().port)
-
-})
->>>>>>> server
