@@ -34,7 +34,3 @@ let server = app.listen(3000, function() {
   console.log('Example app listening at http://%s:%s', host, port);
 
 });
-<<<<<<< 1be2af901ddcc25e723c74ba5040ed006ba87ab9
-
-=======
->>>>>>> 'server'

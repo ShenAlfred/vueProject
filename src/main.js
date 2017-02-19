@@ -2,22 +2,19 @@
 // // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import FastClick from 'fastclick'
-import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
 import App from './App'
 import routes from './configRouter'
-
-Vue.use(VueResource)
 Vue.use(VueRouter)
-
+Vue.use(VueResource)
 window.location.hash = 'home'
-FastClick.attach(document.body)
-
-let routes = ConfigRouter
 
 const router = new VueRouter({
   routes
 })
+
+FastClick.attach(document.body)
 
 /* eslint-disable no-new */
 new Vue({
