@@ -27,7 +27,7 @@ app.get('/Grids', (req, res) => {
   res.end(JSON.stringify(Grids))
 })
 
-let server = app.listen(3000, function() {
+let server = app.listen(3131, function() {
   var host = server.address().address;
   var port = server.address().port;
 
