@@ -1,7 +1,26 @@
+/* 系统级标签样式重置 */
+body {
+  background-color: #fbf9fe;
+}
+body, html {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .fc888 {
   color: #888;
 }
-
+a {
+  color: #333;
+  text-decoration: none;
+}
+/* vux 样式重置*/
 .weui_tabbar_item.weui_bar_item_on .fa {
   color: #09BB07;
 }
