@@ -8,6 +8,7 @@
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "server": "node ./server/index",
+    "ws": "node ./server/WebSocket",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
@@ -16,10 +17,13 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "fastclick": "^1.0.6",
+    "fs": "0.0.1-security",
     "mongoose": "^4.8.1",
     "vue": "^2.1.0",
     "vue-resource": "^1.1.2",
     "vue-router": "^2.0.1",
+    "vue-socket.io": "^2.1.0",
+    "vue-websocket": "^0.2.2",
     "vuex": "^2.1.1",
     "vuex-i18n": "^1.3.1",
     "vux": "^2.0.13"
