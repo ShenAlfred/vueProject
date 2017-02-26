@@ -9,6 +9,7 @@
           </router-link>
         </div>
       </grid>
+
       <NavBar></NavBar>
     </view-box>
 </template>
