@@ -1,28 +1,6 @@
 <template>
   <div class="full-page">
-    <flexbox class="person-ui" orient="vertical" direction="column" :gutter="0">
-        <div class="person-department">
-        <ul class="department-list">
-          <li class="active">
-            <a href="javascript:;">
-              <i class="fa fa-chevron-left ver-m"></i>
-              <span class="ver-m">集团一</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <i class="fa fa-chevron-left ver-m"></i>
-              <span class="ver-m">部门一</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <flexbox-item>
-        <div class="person-list-content">
-          <department data=""></department>
-        </div>
-      </flexbox-item>
-    </flexbox>
+    <department></department>
   </div>
 </template>
 <style>
@@ -34,15 +12,9 @@
 
   export default{
     data () {
-      return {
-        departList: this.getDepartList()
-      }
+      return {}
     },
-    methods: {
-      getDepartList () {
-
-      }
-    },
+    methods: {},
     components: {
       ViewBox,
       Flexbox,

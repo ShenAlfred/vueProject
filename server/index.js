@@ -2,11 +2,8 @@ const mongoose = require('mongoose')
 const express = require('express')
 const http = require("http")
 const app = express()
-
-const User = require('./User/user')
-const Grids = require('./Grids/grids')
+const queryApi = require("./api")
 app.use('/static', express.static('static'))
-
 
 app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -15,17 +12,7 @@ app.all('*', function(req, res, next) {
   next();
 })
 
-app.get('/', function(req, res) {
-  res.end("Hello World!!!")
-})
-
-app.get('/User', function(req, res) {
-  res.end(JSON.stringify(User))
-})
-
-app.get('/Grids', (req, res) => {
-  res.end(JSON.stringify(Grids))
-})
+queryApi(app);
 
 let server = app.listen(3131, function() {
   var host = server.address().address;
