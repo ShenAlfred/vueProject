@@ -14,7 +14,7 @@ app.all('*', function(req, res, next) {
 
 queryApi(app);
 
-let server = app.listen(3131, function() {
+let server = app.listen(8080, function() {
   var host = server.address().address;
   var port = server.address().port;
 

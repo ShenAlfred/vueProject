@@ -3,7 +3,7 @@
  */
 
 const config = {
-  baseUrl: 'http://localhost:3131'
+  baseUrl: 'http://10.52.30.105:8080'
 }
 
 module.exports = config

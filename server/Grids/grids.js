@@ -6,8 +6,8 @@ const config = require("../config")
 const Grids = [
   {
     'icon': config.baseUrl + '/static/icon-grid/icon1.png',
-    'name': 'Grid One',
-    'url': ''
+    'name': '云api',
+    'url': 'Yun/'
   },
   {
     'icon': config.baseUrl + '/static/icon-grid/icon2.png',
